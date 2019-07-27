@@ -1,0 +1,32 @@
+{
+  "name": "@plavc/ts-template",
+  "version": "1.0.0",
+  "description": "A TypeScript Template Project with basic typescript config and package.json.",
+  "main": "dist/cli.js",
+  "bin": {
+    "ts-template": "dist/cli.js"
+  },
+  "author": "gregor@plavcak.net",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/plavc/ts-template.git"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "start": "npm run build && node dist/cli",
+    "build": "tsc -d",
+    "watch": "tsc -w",
+    "lint": "tslint --project .",
+    "format": "prettier",
+    "test": "node dist/test"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.18",
+    "prettier": "^1.18.2",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {}
+}
